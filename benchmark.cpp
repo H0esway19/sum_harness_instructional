@@ -14,7 +14,6 @@
 #include <vector>
 #include <string.h>
 
-
 extern void setup(int64_t N, uint64_t A[]);
 extern int64_t sum(int64_t N, uint64_t A[]);
 
@@ -31,6 +30,9 @@ int main(int argc, char** argv)
    int64_t t;
    int n_problems = problem_sizes.size();
 
+   // Declare end_time outside the loop
+   std::chrono::time_point<std::chrono::high_resolution_clock> end_time;
+
    /* For each test size */
    for (int64_t n : problem_sizes) 
    {
@@ -40,22 +42,21 @@ int main(int argc, char** argv)
       setup(n, &A[0]);
 
       // insert your timer code here
-      chrono::time_point<chrono::high_resolution_clock> start_time = chrono::high_resolution_clock::now();
+      std::chrono::time_point<std::chrono::high_resolution_clock> start_time = std::chrono::high_resolution_clock::now();
 
       // invoke method to perform the sum
       t = sum(n, &A[0]);
 
       // insert your end timer code here, and print out elapsed time for this problem size
-      chrono::time_point<chrono::high_resolution_clock> end_time = chrono::high_resolution_clock::now();
+      end_time = std::chrono::high_resolution_clock::now();
 
-
-      chrono::duration<double> elapsed = end_time - start_time;
-
+      std::chrono::duration<double> elapsed = end_time - start_time;
 
       printf(" Sum result = %lld \n",t);
-      std::cout << " Elapsed Time : " << elapsedTime.count() << std::endl;
-
+      std::cout << " Elapsed Time : " << elapsed.count() << std::endl;
    } // end loop over problem sizes
-}
 
-// EOF
+   return 0;
+}
+//EOF
+

@@ -36,7 +36,7 @@ To build and run this code, you need to have the following software tools instal
     mkdir build  
     cd build  
     cmake ../           # cmake generates lots of output   
-    make                # to build the programs  
+    make     c          # to build the programs  
 
 
 

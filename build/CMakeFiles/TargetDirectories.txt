@@ -1,0 +1,6 @@
+/Users/joseavila/Desktop/sum_harness_instructional-1/build/CMakeFiles/benchmark.dir
+/Users/joseavila/Desktop/sum_harness_instructional-1/build/CMakeFiles/sum_direct.dir
+/Users/joseavila/Desktop/sum_harness_instructional-1/build/CMakeFiles/sum_vector.dir
+/Users/joseavila/Desktop/sum_harness_instructional-1/build/CMakeFiles/sum_indirect.dir
+/Users/joseavila/Desktop/sum_harness_instructional-1/build/CMakeFiles/edit_cache.dir
+/Users/joseavila/Desktop/sum_harness_instructional-1/build/CMakeFiles/rebuild_cache.dir
